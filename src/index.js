@@ -4,7 +4,7 @@
 
 var Promise = require("bluebird");
 
-var lib = require("./lib.js");
+var dice = require("./dice.js");
 
 
 //
@@ -32,7 +32,7 @@ Diceware.get_word = function(wordlist, index) {
 	
 	var retval = wordlist[index];
 
-	if (retval) {
+	if (retval) {	
 		retval = retval[0].toUpperCase() + retval.slice(1);
 
 	} else {
@@ -238,7 +238,7 @@ Diceware.rollDiceHandler = function(e) {
 		//
 		// Do our dice rolls all at once.
 		//
-		return(lib.rollDice(Diceware.num_dice_per_roll));
+		return(dice.rollDice(Diceware.num_dice_per_roll));
 
 	}).then(function(data) {
 		//
@@ -422,7 +422,7 @@ Diceware.go = function() {
 		jQuery("#github_ribbon").fadeIn(1000);
 	}
 
-	if (!lib.iCanHasGoodCrypto()) {
+	if (!dice.iCanHasGoodCrypto()) {
 		jQuery(".source .bad_crypto").clone().hide().fadeIn(800).appendTo(".message");
 	}
 

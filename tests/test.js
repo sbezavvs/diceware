@@ -4,7 +4,7 @@ var should = require('should');
 
 var Promise = require("bluebird");
 
-var diceware = require("../src/lib.js")
+var diceware = require("../src/dice.js")
 
 
 describe("Diceware", function() {
