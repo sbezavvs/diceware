@@ -427,23 +427,8 @@ Diceware.go = function() {
 	}
 
 
-	var dice = 5;
-	if (Diceware.get_data["dice"]) {
-		if (Diceware.get_data["dice"] >= 5 && Diceware.get_data["dice"] <= 7) {
-			dice = Diceware.get_data["dice"];
-			Diceware.num_dice_per_roll = dice;
-		}
-	}
-
-	console.log("Rolling " + Diceware.num_dice_per_roll + " dice per roll");
-
-	var file = "wordlist-" + dice + "-dice.js";
-	if (dice == 5) {
-		//
-		// 5 Dice?  Let's use the EFF version.
-		//
-		file = "wordlist-" + dice + "-dice-eff.js";
-	}
+	// Roll with customized 5 dice EFF formated wordlist
+	file = "wordlist-5-dice.js";
 
 	var js = "./wordlist/" + file;
 	console.log("Looks like we're loading '" + js + "'!");

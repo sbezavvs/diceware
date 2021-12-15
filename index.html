@@ -1,373 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Diceware: Create Secure Passwords You Can Actually Remember!</title>
+<html lang="es">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Diceware: Español</title>
 
-    <!-- Bootstrap -->
-    <link href="./dist/bootstrap.min.css" rel="stylesheet">
-    <link href="./starter-template.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="./dist/bootstrap.min.css" rel="stylesheet">
+	<link href="./starter-template.css" rel="stylesheet">
 
 	<!-- Our different dice faces. -->
-    <link href="./dice.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-	<meta property="og:title" content="Diceware: Generate Secure Passwords You Can Actually Remember!" />
-	<meta property="og:description" content="Diceware is a password generator which creates passwords based on dicerolls keyed to a set of words." />
-	<meta property="og:url" content="https://diceware.dmuth.org/" />
-	<meta property="og:image" content="https://diceware.dmuth.org/dice.jpg" />
-
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@dmuth" />
-	<meta name="twitter:url" content="https://diceware.dmuth.org/" />
-	<meta name="twitter:title" content="Diceware: Generate Secure Passwords You Can Actually Remember!" />
-	<meta name="twitter:description" content="Diceware is a password generator which creates passwords based on dicerolls keyed to a set of words." />
-	<meta name="twitter:image" content="https://diceware.dmuth.org/dice.jpg" />
-
-  </head>
-  <body>
-
-
-<div class="container">
-
-<a id="github_ribbon" style="display: none; " href="https://github.com/dmuth/diceware"
-	><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-
-<div class="starter-template">
-	<h1>Diceware Password Generator</h1>
-	<p class="lead">
-	Generate high-entropy passwords the easy way!
-	</p>
-
-
-	<!-- This row is completely hidden, but is used to hold elements 
-		that get cloned after a dice roll. -->
-	<div class="row source" style="display: none; ">
-		<div class="col-md-12" style="height: 0px; ">
-
-      <div class="die dice1 dice_element" style="float: left; ">
-        <div class="dot center"></div>
-      </div>
-
-      <div class="die dice2 dice_element" style="float: left; ">
-        <div class="dot dtop dleft"></div>
-        <div class="dot dbottom dright"></div>
-      </div>
-
-      <div class="die dice3 dice_element" style="float: left; ">
-        <div class="dot dtop dleft"></div>
-        <div class="dot center"></div>
-        <div class="dot dbottom dright"></div>
-      </div>
-
-      <div class="die dice4 dice_element" style="float: left; ">
-        <div class="dot dtop dleft"></div>
-        <div class="dot dtop dright"></div>
-        <div class="dot dbottom dleft"></div>
-        <div class="dot dbottom dright"></div>
-      </div>
-
-      <div class="die dice5 dice_element" style="float: left; ">
-        <div class="dot dtop dleft"></div>
-        <div class="dot dtop dright"></div>
-        <div class="dot center"></div>
-        <div class="dot dbottom dleft"></div>
-        <div class="dot dbottom dright"></div>
-      </div>
-
-      <div class="die dice6 dice_element" style="float: left; ">
-        <div class="dot dtop dleft"></div>
-        <div class="dot dtop dright"></div>
-        <div class="dot center dleft"></div>
-        <div class="dot center dright"></div>
-        <div class="dot dbottom dleft"></div>
-        <div class="dot dbottom dright"></div>
-      </div>
-
-	<div class="dice_word dice_element" style="float: left; padding-left: 20px; padding-top: 25px; ">
-	</div>
-
-		<div class="results_words_key" >Your words are: </div>
-		<div class="results_words_value" ></div>
-
-		<div class="results_phrase_key" >Your passphrase is: </div>
-		<div class="results_phrase_value" ></div>
-
-		<div class="results_num_possible_key" ># of possible passwords: </div>
-		<div class="results_num_possible_value" ></div>
-
-	</div>
-
-	<div class="alert alert-danger bad_crypto" role="alert">
-	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-	<span class="sr-only">Error:</span>
-	Whoa there! Your browser doesn't have the getRandomValues() function.
-	This means that dice rolls you make <em>will not be cryptogrpahically secure!</em><br/>
-	Please try another browser. Otherwise, proceed at your own risk.
-	</div>
+	<link href="./dice.css" rel="stylesheet">
 
-	</div> <!--/ row -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-	<div class="row">
-		<div class="col-md-12">
+	</head>
 
-		<div class="message" ></div>
+	<body>
 
-		<h2 class="dice_num">
-		Number of Dice Rolls:
-		</h2>
 
-		<div class="btn-group-lg" role="group" aria-label="...">
-		<button id="button-dice-2" type="button" class="btn btn-default dice_button">2</button>
-		<button id="button-dice-3" type="button" class="btn btn-default dice_button">3</button>
-		<button id="button-dice-4" type="button" class="btn btn-default dice_button">4</button>
-		<button id="button-dice-5" type="button" class="btn btn-default dice_button">5</button>
-		<button id="button-dice-6" type="button" class="btn btn-default dice_button active">6</button>
-		<button id="button-dice-7" type="button" class="btn btn-default dice_button">7</button>
-		<button id="button-dice-8" type="button" class="btn btn-default dice_button">8</button>
-		</div>
+		<div class="container">
 
-		<br/>
-		<a name="roll_dice_button" ></a>
+			<div class="starter-template">
+				<h1>Generador de contraseñas seguras</h1>
 
-		<button type="button" class="btn btn-default btn-lg btn-primary" id="roll_dice">
-			<span class="glyphicon glyphicon-play" aria-hidden="true" ></span> Roll Dice!
-		</button>
+				<p class="lead">
+					Fundación Karisma - Fundación para la Libertad de Prensa
+				</p>
 
-		</div>
 
-	</div><!-- /row -->
-	<p/>
+				<!-- This row is completely hidden, but is used to hold elements that get cloned after a dice roll. -->
+				<div class="row source mt-4" style="display: none; ">
 
-	<div class="row">
-		<div class="col-md-12" >
-		<div class="results">
+					<div class="col-md-12" style="height: 0px; ">
 
-		</div>
-		</div>
-	</div><!-- /row -->
+						<div class="die dice1 dice_element" style="float: left; ">
+							<div class="dot center"></div>
+						</div>
 
+						<div class="die dice2 dice_element" style="float: left; ">
+							<div class="dot dtop dleft"></div>
+							<div class="dot dbottom dright"></div>
+						</div>
 
-	<div class="row" style="text-align: left;">
-		<div class="col-md-12">
-<h3>About Diceware</h3>
+						<div class="die dice3 dice_element" style="float: left; ">
+							<div class="dot dtop dleft"></div>
+							<div class="dot center"></div>
+							<div class="dot dbottom dright"></div>
+						</div>
 
-Weak passwords are a big flaw in computer security due to a lack of "entropy" 
-or randomness.  For example, how many times have you used the name of a pet or relative or street
-in a password, or perhaps the number "1"?  Not very random, is it? 😃
-Worse still, if
-passwords are reused between services, <a href="http://www.businessinsider.com/biggest-password-mistake-2014-8"
-	>that increases your security risk</a>.  This is not theoretical, <a href="http://www.techspot.com/news/65255-hackers-access-github-accounts-reusing-passwords-previous-leaks.html"
-	>this has already happened.</a>
-</p>
+						<div class="die dice4 dice_element" style="float: left; ">
+							<div class="dot dtop dleft"></div>
+							<div class="dot dtop dright"></div>
+							<div class="dot dbottom dleft"></div>
+							<div class="dot dbottom dright"></div>
+						</div>
 
-Fact is, humans are terrible at remembering random combinations of letters and
-numbers, but we are great at remembering phrases of words. That's where Diceware comes in.
-</p>
+						<div class="die dice5 dice_element" style="float: left; ">
+							<div class="dot dtop dleft"></div>
+							<div class="dot dtop dright"></div>
+							<div class="dot center"></div>
+							<div class="dot dbottom dleft"></div>
+							<div class="dot dbottom dright"></div>
+						</div>
 
-This Diceware web app is based on the proposal at <a href="http://world.std.com/~reinhold/diceware.html">http://world.std.com/~reinhold/diceware.html</a>
-wherein virtual dice are rolled 5 times, and the 5 digit number used against a lookup table of words.
-4 dice rolls gives you 4 random words which are easy for a human being to remember, yet have
-a high amount of entropy which makes them hard to crack.
-</p>
+						<div class="die dice6 dice_element" style="float: left; ">
+							<div class="dot dtop dleft"></div>
+							<div class="dot dtop dright"></div>
+							<div class="dot center dleft"></div>
+							<div class="dot center dright"></div>
+							<div class="dot dbottom dleft"></div>
+							<div class="dot dbottom dright"></div>
+						</div>
 
-For more information on Diceware:
-<ul>
-<li><a href="http://world.std.com/~reinhold/diceware.html">The Diceware Passphrase FAQ</a></li>
-<li><a href="http://world.std.com/~reinhold/diceware.wordlist.asc">Original Diceware word list</a> (This implementation uses <a href="#wordlist">a different wordlist...</a>)</li>
-<li><a href="http://world.std.com/~reinhold/diceware.txt">Diceware for Passphrase Generation and Other Cryptographic Applications</a></li>
-</ul>
+						<div class="dice_word dice_element" style="float: left; padding-left: 20px; padding-top: 25px; ">
+						</div>
 
-For more information on the entropy in passphrases, I'd like to refer you 
-<a href="https://xkcd.com/936/">to this XKCD comic</a>.</p>
+						<div class="results_words_key" >Tu lista de palabras: </div>
+						<div class="results_words_value" ></div>
 
-Diceware is a trademark of Arnold Reinhold.
+						<div class="results_phrase_key" >Tu frase clave es: </div>
+						<div class="results_phrase_value" ></div>
 
-<h3>FAQ: Why not use LastPass or a similar product?</h3>
+						<div class="results_num_possible_key" >Número de posibles contraseñas:</div>
+						<div class="results_num_possible_value" ></div>
 
-By all means, feel free to do so.  LastPass is an excellent product and I highly recommend it.
-That said, there's no reason that Diceware cannot be used concurrently with LastPass.  Personally,
-I like passwords that I can remember.
+					</div>
 
+					<div class="alert alert-danger bad_crypto" role="alert">
 
-<h3>FAQ: What are some good use cases for Diceware?</h3>
+						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 
-<ul>
-<li>Smart TVs: Diceware is a great fit for password entry on Smart TVs, or any other environment where typing non-alphanumerics is a challenge.</li>
-<li>Work/Shared Computer: Let's say you're using a computer that you do not own, and want to log into a personal account.  You may not want to install LastPass on that machine, so if you've generated that account's password with Diceware, it will be much easier to type in on the keyboard. </li>
-</ul>
+						<span class="sr-only">Error:</span>
+					
+						Parece que tu navegador no tiene la función necesaria para poder generar número aleatorios de forma segura.
+						Esto significa que el número generado en tus dados <em>no está es criptográficamente seguro</em><br/>.
+						Por favor usa otro navegador, de lo contrario, procede bajo tu propio riesgo.
+					</div>
 
+				</div> <!--/ row -->
 
-<h3>FAQ: What are some BAD use cases for Diceware?</h3>
+				<div class="row">
+					<div class="col-md-12">
 
-You should not use Diceware in any cases where it is highly likely an attacker can get a copy
-of your encrypted password and use high-volume cracking attempts against it.
-A bad case--possibly the worst case--for using Diceware would be to secure your BitCoin wallet,
-because all BitCoin nodes have a copy of the BitCoin Ledger, and an attacker 
-<a href="https://umanovskis.se/blog/post/leaky-faucet/">could attempt password cracking your wallet</a>.
+						<div class="message" ></div>
 
+						<h2 class="dice_num">
+						Número de palabras:
+						</h2>
 
-<h3>FAQ: Should I add numbers or an exclamation point to my password?</h3>
+						<div class="btn-group-lg" role="group" aria-label="...">
+							<button id="button-dice-3" type="button" class="btn btn-default dice_button">3</button>
+							<button id="button-dice-4" type="button" class="btn btn-default dice_button">4</button>
+							<button id="button-dice-5" type="button" class="btn btn-default dice_button">5</button>
+							<button id="button-dice-6" type="button" class="btn btn-default dice_button active">6</button>
+							<button id="button-dice-7" type="button" class="btn btn-default dice_button">7</button>
+							<button id="button-dice-8" type="button" class="btn btn-default dice_button">8</button>
+							<button id="button-dice-8" type="button" class="btn btn-default dice_button">9</button>
+							<button id="button-dice-8" type="button" class="btn btn-default dice_button">10</button>
+						</div>
 
-No, don't do that.  The short answer is than length makes your password more secure than special characters do.  But don't take it from me, <a href="https://www.engadget.com/2017-08-08-nist-new-password-guidelines.html">take it from the man who put us through password hell</a> and regrets every minute of it.
-</p>
+						<br/>
 
-The NIST has since released new password creation guidelines in a document which is rather lengthly, <a href="https://auth0.com/blog/dont-pass-on-the-new-nist-password-guidelines/">but summarized nicely here</a>.
+						<a name="roll_dice_button" ></a>
 
+						<button type="button" class="btn btn-default btn-lg btn-primary" id="roll_dice">
+							<span class="glyphicon glyphicon-play" aria-hidden="true" ></span> Lanzar dados!
+						</button>
 
-<h3>"I can't believe you're sending passwords over the Internet!"</h3>
+					</div>
 
-<a href="dude-chill-just-chill.gif">Chill</a>.  I'm not.  Passwords are generated within your browser and do not leave it (unless you copy them out yourself).
+				</div><!-- /row -->
 
+				<div class="row mt-4">
+					<div class="col-md-12" >
+						<div class="results"></div>
+					</div>
+				</div><!-- /row -->
 
-<h3>FAQ: Are these dice rolls cryptographically secure?</h3>
 
-Yes, insofar as we're using the 
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues">getRandomValues() function in Javascript</a>, 
-and you trust that your
-browser and computer have not been compromised or otherwise tampered with.  Keep in mind that a not-so-theoretical attack would be for an attacker to compromise the random number generator on your computer so that
-anything that is encrypted (or passkeys generated) would be suspectible to less intense cryptoanalysis.
+				<div class="row mt-4" style="text-align: left;">
+					<div class="col-md-12">
 
+						<!-- Texto descriptivo aquí -->
 
-<h3>FAQ: How secure is the Diceware approach?</h3>
+					</div>
 
-If you want the absolute worst password security, go right ahead and use the same password everywhere so that when one service is cracked, an attacker can compromise every account you own. (Plz don't do that)</p>
+				</div>
 
-If you want the absolute best security, choose a different password of completely random charcters for each service.</p>
+			</div><!-- /starter-template -->
 
-If you want a middle of the road approach that offers medium security, Diceware is the way to go.  I wrote it for people like <a href="https://www.flickr.com/photos/dmuth/48499048131/in/photosof-dmuth/">my parents</a>, who might struggle with a password manager or not want to enter random characters when trying to enter their Apple password into their Apple TV, or want a password to log into their Mac that they can actually remember and not have to write down.</p>
+		</div><!-- /.container -->
 
 
-<h3>FAQ: Is the source available?</h3>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="./dist/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="./dist/bootstrap.min.js"></script>
 
-Yep!  You can grab a copy at <a href="https://github.com/dmuth/diceware">https://github.com/dmuth/diceware</a>
-</p>
+		<script src="./dist/bundle.js"></script>
 
-In fact, if you are nervous about generating a password on a website (even though the password is actually 
-generated by Javascript in your browser), I would encourage you to download the source and run it locally.
-</p>
-
-If you do want to run Diceware locally, just download the source and run a webserver in Python with
-this command: <tt style="background-color: #dddddd; ">python -m SimpleHTTPServer 8000</tt>.  You will then able to access DiceWare at 
-<a href="http://localhost:8000/">http://localhost:8000/</a>.
-
-<a name="debug"></a>
-<h3>FAQ: Is there a way to roll the dice automatically?</h3>
-
-Yes, there is.  Append "?debug=n" to the URL to automatically roll the dice N times.
-<p/>
-<p/>
-
-Examples: <a href="?debug=4">Roll the Dice 4 times.</a>
-<a href="?debug=5">Or 5 times.</a> 
-<a href="?debug=6">Or even 6 times!</a>
-<p/>
-
-
-<a name="skip_animation"></a>
-<h3>FAQ: Is there a way to skip the dice animation?</h3>
-
-Yeah.  Append "?skip_animation" to the URL to not display the dice animation
-<p/>
-<p/>
-
-Examples: <a href="?debug=4&skip_animation">4 dice rolls with no animation</a>
-<p/>
-
-
-<a name="wordlist"></a>
-<h3>FAQ: Can you tell me more about the list of words?</h3>
-
-For rolls of 5 dice, I am now using <a href="https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases"
-	>the worldlist from the EFF</a>. Substantial enhancements have been made over the original list
-designed to improve usability without compromising security.
-</p>
-</p>
-
-
-I started off using <a href="http://world.std.com/~reinhold/diceware.wordlist.asc">the original wordlist</a>,
-but it contained a lot of symbols, punctuation, numbers, and 2 and 3 letter words.  I wanted to try a different
-wordlist with longer words, no non-alphabetic characters, and words more commonly used.  So then I tried
-<a href="http://norvig.com/ngrams/">Peter Norvig's</a> list of <a href="http://norvig.com/ngrams/count_1w.txt"
-		>the 1/3rd million most frequently used words</a>.  Peter Norvig's list is still in use for when 6 or 7 dice are rolled.
-
-<h3>FAQ: How many dice are rolled per word?</h3>
-
-The default is 5 dice, which allows for 7,776 different words per roll.  While I have some debug hooks
-in the code so that you can run Diceware with <a href="?dice=6">6 dice per word</a> and 
-<a href="?dice=7">7 dice per word</a> (for 46,655 and 279,935 possible words, respectively), the words
-used become more obscure, which makes them more difficult to remember, so I'm not entirely sure that is a good thing.
-But for now, the functionality is there, if there is a desire for it.
-
-
-<h3>FAQ: Is Air-gapped Operation Supported?</h3>
-
-It is now!  The entire project can be downloaded and executed on a machine that is not connected to the Internet.
-I was able to pull this off due in part to uploading the code to an AWS S3 Bucket and then making that
-content available via <a href="https://aws.amazon.com/cloudfront/">CloudFront</a>.
-
-
-<h3>FAQ: How secure is the webserver this app is on?</h3>
-
-I used to host this app on my personal webserver, but didn't like that doing so increased my webserver's
-risk profile substantially.  I've since moved the app into AWS--the HTML, Javascript, and CSS resides in an 
-S3 bucket, and the content is served up via <a href="https://aws.amazon.com/cloudfront/">CloudFront</a> with
-an SSL certificate provided by <a href="https://aws.amazon.com/certificate-manager/">AWS Certificate Manager</a> for free.
-
-The S3 bucket has <a href="https://aws.amazon.com/cloudtrail/">CloudTrail</a> enabled on it, so that I have
-an audit trail of all actions performed on that bucket.
-
-
-<h3>FAQ: Why did you change the wordlist?</h3>
-
-</p>
-
-I am always considering what words I use in the wordlist.  I may opt to use shorter words in the future.
-
-
-<h3>Who built this? / Contact</h3>
-
-My name is <a href="http://www.dmuth.org/">Douglas Muth</a>, and I am a software engineer in Philadelphia, PA.
-</p>
-
-There are several ways to get in touch with me:
-<ul>
-<li>Email to doug.muth AT gmail DOT com or dmuth AT dmuth DOT org</li>
-<li><a href="http://www.facebook.com/dmuth">Facebook</a> and <a href="http://twitter.com/dmuth">Twitter</a></li>
-<li><a href="http://www.linkedin.com/in/dmuth">LinkedIn</a></li>
-<li><a href="https://github.com/dmuth/diceware/issues">Opening an Issue in GitHub</a>
-</ul>
-
-Feel free to reach out to me if you have any comments, suggestions, bug reports, or wish to buy me a beer. 😃🍻
-<br/>
-<br/>
-<br/>
-<br/>
-
-		</div>
-
-	</div>
-
-</div><!-- /starter-template -->
-
-</div><!-- /.container -->
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="./dist/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="./dist/bootstrap.min.js"></script>
-
-	<script src="./dist/bundle.js"></script>
-
-  </body>
+	</body>
 </html>
