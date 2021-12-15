@@ -138,7 +138,7 @@ function getJsArray($words, $params) {
 		. "//\n"
 		. "// Diccionario Diceware.\n"
 		. "//\n"
-		. "// Generado a partir de las 66666 palabras más comunes en español. $url\n"
+		. "// Generado a partir de las palabras más comunes en español. $url\n"
 		. "//\n"
 		. "var wordlist = [\n"
 		;
@@ -174,7 +174,7 @@ function main($argv) {
 	//
 	// Handle personalized wordlist.
 	//
-	$filename = "spanish_karisma_flip.csv";
+	$filename = "dice5_karisma_flip.csv";
 	$words = readWordList($filename);
 	//print_r($words); // Debugging
 
